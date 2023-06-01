@@ -8,6 +8,9 @@
 </head>
 <body>
     <div>
+        <h2>수정 페이지</h2>
+    </div>
+    <div>
         <div>
             <form method="POST" action="">{% csrf_token %}
                 <input type="text" value="{{post.title}}" name="title" placeholder="수정할 제목!">

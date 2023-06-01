@@ -47,3 +47,8 @@ def delete(request, post_pk):
     post.delete()
 
     return redirect('home')
+
+def delete_comment(request, post_pk, comment_pk):
+    comment = Comment.objects.get(pk=comment_pk)
+    comment.delete()
+    return redirect('detail', post_pk)
