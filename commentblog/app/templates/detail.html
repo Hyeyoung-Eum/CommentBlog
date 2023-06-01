@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            제목 : {{post.title}}
+        </div>
+        <div>
+            내용 : {{post.content}}
+        </div>
+        <div>
+            <a href="{% url 'home' %}">홈 화면</a>
+            <!-- 수정하기와 삭제하기 추가 필요 -->
+        </div>
+    </div>
+
+    <div>
+        <form method="POST">{% csrf_token %}
+            <input type="text" name="content" placeholder="댓글을 입력해주세요"/>
+            <button type="submit">작성하기</button>
+        </form>
+    </div>
+</body>
+</html>
