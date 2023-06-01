@@ -26,5 +26,9 @@
             <button type="submit">작성하기</button>
         </form>
     </div>
+    <!-- 전달받은 post와 관련된 comments(Comment Model에 들어있는 것임)에 들어있는 모든 것을 가지고 와서 -->
+    {% for comment in post.comments.all %}
+    <li>{{comment.content}}</li>
+    {% endfor %}
 </body>
 </html>
